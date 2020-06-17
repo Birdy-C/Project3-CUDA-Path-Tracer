@@ -62,6 +62,7 @@ struct RenderState {
 struct PathSegment {
 	Ray ray;
 	glm::vec3 color;
+    glm::vec3 param;
 	int pixelIndex;
 	int remainingBounces;
 };
@@ -72,5 +73,6 @@ struct PathSegment {
 struct ShadeableIntersection {
   float t;
   glm::vec3 surfaceNormal;
+  glm::vec3 intersectPosition;
   int materialId;
 };
